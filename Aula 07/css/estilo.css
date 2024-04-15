@@ -1,0 +1,13 @@
+.primeiraDiv{
+    border: 5px outset rgb(255, 0, 170);
+    background: mediumaquamarine;
+    width: 300px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px auto;
+    padding: 30px;
+}
+
+.primeiraDiv:hover{
+    color: brown;
+    background: lavender;
+}

@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.cabecalho{
+    background-color: #26a9e1;
+    color: white;
+    font-size: 48px;
+    padding: 10 108px;
+    border-radius: 8px;
+}
+
+.h1{
+    display: inline-block;
+    width: 80%;
+}
+
+.relogio{
+    display: inline-block;
+    width: 20%;
+}
+
+.tabelaPrincipal {
+    padding: 18px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+thead tr th{
+    background-color: #2029AD;
+    color: white;
+}
+
+table{
+    width: 90%;
+}
+/* cor alternando*/ 
+table tr:nth-child(odd){
+    background-color: white;
+    color: black;
+}
+
+table tr:nth-child(even){
+    background-color: #26a9e1;
+}
+
+td,th{
+    padding: 4px;
+}
+
+
+
+
+
+
+
+
+
+

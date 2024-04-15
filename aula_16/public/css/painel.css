@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html,body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.cabecalho{
+    background-color: #26a9e1;
+    color: white;
+    font-size: 48px;
+    padding: 10px 100px;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+.saudacao{
+    display: inline-block;
+    width: 90%;
+
+}
+
+.relogio{
+    display: inline-block;
+    width: 10%;
+}
+
+.tabelaPrincipal {
+
+    display: inline-block;
+    text-align: center;
+    width: 85%;
+    vertical-align: top;
+    
+}
+
+thead tr th{
+    background-color: #006bb4;
+    color: white;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+/* cor alternando*/ 
+table tr:nth-child(odd){
+    background-color: white;
+    color: black;
+}
+
+table tr:nth-child(even){
+    background-color: #26a9e1;
+    color: white;
+}
+
+td,th{
+    padding: 4px;
+}
+
+.lateral{
+    display: inline-block;
+    width: 15%;
+}
+
+.imganun{
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 8px;
+}
+
+img{
+    max-width: 100%;
+}

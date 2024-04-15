@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anúncios laterais</title>
+</head>
+<body>
+    <div id="upload">
+    <h1>Upload de imagens</h1>
+    <!--nova rota "imagens"-->
+    <form action="/imagens" method="post" enctype="multipart/form-data">
+        <label for="">Alternativo</label>
+        <input type="text" name="alternativo"><br>
+        <label for="">Imagem</label>
+        <input type="file" name="imagem"><br>
+        <input type="submit" value="Enviar">
+    </form>
+    </div>
+</body>
+</html>

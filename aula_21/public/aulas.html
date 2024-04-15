@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas</title>
+</head>
+<body>
+    <div id="inserir_aulas">
+        <h1>Inserir aulas</h1>
+        <!--Nova rota "aulas"-->
+        <form action="/aulas" method="post" enctype="multipart/form-data">
+
+            <label for="">Data:</label>
+            <input type="date" name="data"><br>
+
+            <label for="">Início:</label>
+            <input type="time" name="hora_inicio"><br>
+
+            <label for="">Fim:</label>
+            <input type="time" name="hora_fim"><br>
+
+            <label for="">Turma:</label>
+            <input type="text" name="turma"><br>
+
+            <label for="">Instrutor:</label>
+            <input type="text" name="instrutor"><br>
+
+            <label for="">Unidade Curricular:</label>
+            <input type="text" name="unidade_curricular"><br>
+
+            <label for="">Ambiente:</label>
+            <input type="text" name="ambiente"><br>
+
+            <input type="submit" value="Inserir">
+        </form>
+    </div>
+</body>
+</html>
