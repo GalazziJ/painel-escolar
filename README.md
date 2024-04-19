@@ -4,5 +4,4 @@ Atualização do painel escolar do SENAI de Vitória
 ● HTML <br>
 ● CSS <br>
 ● JavaScript <br>
-● Bootstrap 5 <br>
 ● Node.js <br>
