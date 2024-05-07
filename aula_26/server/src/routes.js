@@ -13,7 +13,7 @@ const usuario = require("./app/models/usuario")
 routes.post("/usuarios", usuarios.create)
 routes.post("/login", usuarios.logar)
 
-
+routes.delete("/usuarios/:usuario_id",usuarios.destroy)
 routes.get("/usuarios/all",usuarios.index)
 //routes.get("/usuarios", usuarios.verificaToken, usuarios.index)
 routes.get("/usuarios/:usuario_id",usuarios.show)
@@ -68,5 +68,5 @@ routes.put("/sites/:id", sites.update)
 //deleta um registro através do método "destroy"
 routes.delete("/sites/:id", sites.destroy)
 
-// torna a classe exportável 
+// torna a classe exportável
 module.exports = routes

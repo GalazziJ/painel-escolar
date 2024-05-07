@@ -33,7 +33,7 @@ function Home() {
         <div className="container">
             <h1>Todos os usuários</h1>
 
-            <table className=''>
+            <table className='table'>
                 <tr>
                     <th scope="col">ID Usuário</th>
                     <th scope="col">Nome</th>

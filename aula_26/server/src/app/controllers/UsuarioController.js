@@ -41,6 +41,22 @@ class UsuarioController {
             }
         )
     }
+    destroy(req, res){
+        let {usuario_id} = req.params // pegando ID da requisição
+
+        // chamar o método de deletar o usuário
+        Usuario.deletarUsuario(usuario_id).then(
+            resposta => {
+                res.status(resposta[0]).json(resposta[1])
+            }
+        ).catch(
+            resposta =>{
+                console.debug(resposta)
+                res.status(resposta[0]).json("Erro: " + resposta[1].errno)
+            }
+        )
+    }
+
 
     logar(req, res) {
         let { usuario, senha } = req.body

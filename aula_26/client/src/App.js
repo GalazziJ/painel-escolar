@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
 import Navbar from './components/Navbar';
 import AddUsuario from './views/Adicionar_usuarios/adicionar_usuarios'
-
+import GestaoUsuarios from './views/GestaoUsuarios/GestaoUsuarios';
 
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
       <Route path='/adicionarUsuario' element={<AddUsuario/>} />
         <Route path='/' element={<Home />} />
         <Route path='/sobrenos' element={<About/>}/>
+        <Route path='/gestaoUsuarios' element={<GestaoUsuarios/>}/>
       </Routes>
     </BrowserRouter>
   );

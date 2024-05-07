@@ -32,7 +32,7 @@ function Navbar() {
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">Contato</a>
+                        <a href="http://localhost:3000/gestaoUsuarios" class="nav-link">Gestão de usuários</a>
                     </li>
                 </ul>
             </div>
