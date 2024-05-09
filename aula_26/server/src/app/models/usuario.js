@@ -19,7 +19,7 @@ class Usuario {
                     if(retorno.length === 0){
                         resolve([404, "Usuário não encontrado"])
                     }else{
-                    resolve([200,retorno])
+                    resolve([200,retorno[0]])
                     }
                 }
             })
@@ -58,6 +58,24 @@ class Usuario {
         })
     }
 
+    atualizarUsuario(usuario_id,nome, usuario, senha, usuario_tipo){
+        let salt = bcrypt.genSaltSync(10)
+        let hash = bcrypt.hashSync(senha, salt)
+
+        return new Promise((resolve, reject) =>{
+            let sql = `UPDATE usuarios SET nome = '${nome}', usuario = '${usuario}',
+            senha = '${hash}', usuario_tipo = '${usuario_tipo}' WHERE usuario_id= '${usuario_id}'`
+
+            this.conexao.query(sql, function(erro,retorno) {
+                if (erro) {
+                    console.debug(erro)
+                    reject([400,erro])
+                } else {
+                    resolve([200, 'Usuário atualizado'])
+                }
+            })
+        })
+    }
 
     inserir(nome, usuario, senha, usuario_tipo) {
         let salt = bcrypt.genSaltSync(10)

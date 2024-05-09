@@ -64,6 +64,7 @@ function GestaoUsuarios() {
             <td>{usuario.usuario_tipo}</td>
 
             <td>
+              <button onClick={() => window.location.href = "/atualizarUsuarios/"+usuario.usuario_id} type='button' className='btn btn-primary'>Editar</button>
               <button onClick={() => deletarUsuario(usuario.usuario_id)} className='btn btn-danger'>Deletar</button>
             </td>
           </tr>
