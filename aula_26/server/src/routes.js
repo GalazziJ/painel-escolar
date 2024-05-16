@@ -14,8 +14,8 @@ routes.post("/usuarios", usuarios.create)
 routes.post("/login", usuarios.logar)
 routes.put("/usuarios/:usuario_id",usuarios.update)
 routes.delete("/usuarios/:usuario_id",usuarios.destroy)
-routes.get("/usuarios/all",usuarios.index)
-//routes.get("/usuarios", usuarios.verificaToken, usuarios.index)
+// routes.get("/usuarios/all",usuarios.index)
+routes.get("/usuarios/", usuarios.verificaToken, usuarios.index)
 routes.get("/usuarios/:usuario_id",usuarios.show)
 
 

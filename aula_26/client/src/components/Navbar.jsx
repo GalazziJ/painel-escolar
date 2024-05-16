@@ -6,7 +6,7 @@ function Navbar() {
 
         <nav class="navbar navbar-expand-md navbar-dark bg-danger">
 
-            <a href="http://" class="navbar-brand ps-3">Painel</a>
+            <a href="http://localhost:3000/" class="navbar-brand ps-3">Painel</a>
 
 
             <div class="collapse navbar-collapse justify-content-center px-3" id="menu">
@@ -35,6 +35,11 @@ function Navbar() {
                         <a href="http://localhost:3000/gestaoUsuarios" class="nav-link">Gestão de usuários</a>
                     </li>
                 </ul>
+
+
+                <span class="d-flex navbar-text ">
+                <a href="http://localhost:3000/login" class="nav-link">Login</a>
+                </span>
             </div>
             <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

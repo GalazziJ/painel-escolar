@@ -9,7 +9,7 @@ import Navbar from './components/Navbar';
 import AddUsuario from './views/Adicionar_usuarios/adicionar_usuarios'
 import GestaoUsuarios from './views/GestaoUsuarios/GestaoUsuarios';
 import AtualizarUsuarios from './views/AtualizarUsuarios/AtualizarUsuarios';
-
+import Login from './views/Login/Login';
 function App() {
   return (
     <BrowserRouter>
@@ -20,6 +20,7 @@ function App() {
         <Route path='/sobrenos' element={<About/>}/>
         <Route path='/gestaoUsuarios' element={<GestaoUsuarios/>}/>
         <Route path='/atualizarUsuarios/:usuario_id' element={<AtualizarUsuarios/>}/>
+        <Route path='/login' element={<Login/>}/>
       </Routes>
     </BrowserRouter>
   );
