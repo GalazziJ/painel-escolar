@@ -21,3 +21,5 @@ app.post('/usuarios', UsuarioController.create)
 app.get('/usuarios', UsuarioController.read)
 app.put('/usuarios/:id_usuario', UsuarioController.update)
 app.delete('/usuarios/:id_usuario', UsuarioController.delete)
+
+app.post('/logar', UsuarioController.login)

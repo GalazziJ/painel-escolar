@@ -63,6 +63,21 @@ class UsuarioController {
       }
     )
   }
+  login(req,res){
+    let {login, senha} = req.body
+
+    Usuario.verificarLoginSenha(login,senha).then(
+      resposta=>{
+        console.debug("Efetuando Login")
+        res.status(resposta[0]).json(resposta[1])
+      }
+    ).catch(
+      resposta=>{
+        console.debug("Erro: Efetuando Login")
+        res.status(resposta[0]).json(resposta[1])
+      }
+    )
+  }
 }
 
 module.exports = new UsuarioController()
