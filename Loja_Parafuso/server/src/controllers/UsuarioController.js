@@ -33,10 +33,10 @@ class UsuarioController {
     )
   }
   update(req, res) {
-    let id_usuario = req.params
+    let {id_usuario} = req.params
     let { nome, login, senha } = req.body
 
-    Usuario.atualizarUsuario(nome, login, senha).then(
+    Usuario.atualizarUsuario(id_usuario, nome, login, senha).then(
       resposta => {
         console.debug("Atualizando usuário")
         res.status(resposta[0]).json(resposta[1])
@@ -50,7 +50,7 @@ class UsuarioController {
   }
 
   delete(req,res) {
-    let id_usuario = req.params
+    let {id_usuario} = req.params
     Usuario.deletarUsuario(id_usuario).then(
       resposta => {
         console.debug("Deletando usuário")
@@ -63,6 +63,7 @@ class UsuarioController {
       }
     )
   }
+  
   login(req,res){
     let {login, senha} = req.body
 

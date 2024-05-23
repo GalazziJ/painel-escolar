@@ -11,15 +11,22 @@ function Principal() {
     } else {
 
     }
-    setParafusos([
-      {id: 1, nome: "Sextavado ", id_categoria: 1},
-      {id: 2, nome: "Francês ", id_categoria: 2},
-      {id: 3, nome: "Máquina ", id_categoria: 2}
-    ])
-  },[])
+    listarParafusos()
+  }, [])
+
+  async function listarParafusos() {
+    try {
+      const resposta = await fetch("/parafuso")
+      const dados = await resposta.json()
+      setParafusos(dados)
+    } catch (error) {
+
+    }
+  }
 
   return (
     <div>
+      <a href="/cadastroParafuso">Cadastrar parafuso</a>
       {parafusos.map(
         parafuso => (
           <div>

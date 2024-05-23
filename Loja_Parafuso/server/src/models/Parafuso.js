@@ -44,7 +44,11 @@ class Parafuso {
         if (erro) {
           reject([400, erro])
         } else {
-          resolve([200, retorno])
+          if (retorno["affectedRows"] > 0) {
+            resolve([200, "Parafuso atualizado"])
+          } else {
+            resolve([404, "Parafuso não encontrado"])
+          }
         }
       })
     })
@@ -52,7 +56,7 @@ class Parafuso {
 
   deletarParafuso(id_parafuso) {
     let sql = `DELETE FROM parafuso WHERE idparafuso="${id_parafuso}";`
-
+    console.debug(sql)
     return new Promise((resolve, reject) => {
       this.conexao.query(sql, function (erro, retorno) {
         if (erro) {

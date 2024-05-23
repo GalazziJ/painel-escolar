@@ -39,19 +39,24 @@ class Categoria {
 
   atualizarCategoria(id_categoria, nome) {
     let sql = `UPDATE categorias SET nome="${nome}" WHERE id_categoria="${id_categoria}";`
+    // console.debug(sql)
     return new Promise((resolve, reject) => {
       this.conexao.query(sql, function (erro, retorno) {
         if (erro) {
           reject([400, erro])
         } else {
-          resolve([200, "Categoria atualizada"])
+          if (retorno["affectedRows"] > 0) {
+            resolve([200, "Categoria atualizada"])
+          } else {
+            resolve([404, "Categoria não encontrada"])
+          }
         }
       })
     })
   }
 
   deletarCategoria(id_categoria) {
-    let sql = `DELETE FROM categoria WHERE id_categoria="${id_categoria}";`
+    let sql = `DELETE FROM categorias WHERE id_categoria="${id_categoria}";`
 
     return new Promise((resolve, reject) => {
       this.conexao.query(sql, function (erro, retorno) {
@@ -59,11 +64,11 @@ class Categoria {
           reject([400, erro])
         } else {
           resolve([200, retorno])
-        }
-        if (retorno["affectedRows"] > 0) {
-          resolve([200, "Categoria deletado"])
-        } else {
-          resolve([404, "Categoria não encontrada"])
+          if (retorno["affectedRows"] > 0) {
+            resolve([200, "Categoria deletada"])
+          } else {
+            resolve([404, "Categoria não encontrada"])
+          }
         }
       })
     })
