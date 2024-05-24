@@ -23,7 +23,7 @@ function Login() {
         throw new Error("Erro na requisição" + resposta.status)
       } else {
         const dados = await resposta.json()
-        localStorage.setItem("id_usuario",dados.id_usuario)
+        localStorage.setItem("id_usuario",dados.idusuario)
         window.location.href = "/principal"
       }
 
@@ -33,18 +33,18 @@ function Login() {
 
   }
   return (
-    <div>
-      <h1>Login</h1>
-      <input type="text" placeholder='Login'
+    <div className='container col-md-5 mt-5 justify-content-center border p-5 rounded-4'>
+      <h1 className='text-center mb-4'>Login</h1>
+      <input className='form-control mb-3' type="text" placeholder='Login'
         value={login}
         onChange={(e) => setLogin(e.target.value)}
       />
 
-      <input type="password" placeholder='Senha'
+      <input className='form-control mb-3' type="password" placeholder='Senha'
         value={senha}
         onChange={(e) => setSenha(e.target.value)}
       />
-      <button onClick={efetuarLogin}>Acessar</button>
+      <button className='btn btn-danger w-100' onClick={efetuarLogin}>Acessar</button>
     </div>
   )
 }

@@ -49,6 +49,22 @@ class UsuarioController {
     )
   }
 
+  showUser(req, res) {
+    let {id_usuario} = req.params
+
+    Usuario.selecionarUsuario(id_usuario).then(
+      resposta => {
+        console.debug("Exibindo usuário")
+        res.status(resposta[0]).json(resposta[1])
+      }
+    ).catch(
+      resposta => {
+        console.debug("Erro: Exibindo usuário")
+        res.status(resposta[0]).json(resposta[1])
+      }
+    )
+  }
+
   delete(req,res) {
     let {id_usuario} = req.params
     Usuario.deletarUsuario(id_usuario).then(
@@ -63,7 +79,7 @@ class UsuarioController {
       }
     )
   }
-  
+
   login(req,res){
     let {login, senha} = req.body
 
